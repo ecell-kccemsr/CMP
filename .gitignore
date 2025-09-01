@@ -1,0 +1,44 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Docker volumes
+postgres_data/
+redis_data/
+hls_data/
+prometheus_data/
+grafana_data/
+elasticsearch_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

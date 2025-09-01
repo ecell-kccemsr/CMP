@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    environment:
+      - SERVER_RTMP_ADDRESS=${SERVER_RTMP_ADDRESS}
+      - STREAM_KEY=${STREAM_KEY}
+      - VIDEO_DEVICE=${VIDEO_DEVICE}
+      - AUDIO_DEVICE=${AUDIO_DEVICE}
+    devices:
+      - "${VIDEO_DEVICE}:${VIDEO_DEVICE}"
+      - "${AUDIO_DEVICE}:${AUDIO_DEVICE}"
+    restart: unless-stopped
